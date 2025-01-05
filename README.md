@@ -377,6 +377,9 @@ docker-compose up -d
 - Servidor Nginx: `http://localhost:8081`
 
 ## Testes 
+## Inicializando o script com o comando "./bootstrap.sh
+![image](https://github.com/user-attachments/assets/8bd61591-0b0e-4ae6-929f-a2388840fbd8)
+
 
  ## iniciando os conteineres com o comando "docker-compose up -d" 
 
