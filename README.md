@@ -375,3 +375,10 @@ docker-compose up -d
 
 - Servidor Apache: `http://localhost:8080`
 - Servidor Nginx: `http://localhost:8081`
+
+## Testes 
+
+## Logs utilizando o comando "docker-compose logs" 
+
+![image](https://github.com/user-attachments/assets/79ae93dc-3c76-40f8-a271-1f424f553269)
+
