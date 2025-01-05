@@ -378,7 +378,14 @@ docker-compose up -d
 
 ## Testes 
 
-## Logs utilizando o comando "docker-compose logs" 
+ ## iniciando os conteineres com o comando "docker-compose up -d" 
 
 ![image](https://github.com/user-attachments/assets/79ae93dc-3c76-40f8-a271-1f424f553269)
 
+## Logs utilizando o comando "docker-compose logs"
+
+![image](https://github.com/user-attachments/assets/6b834e0c-865d-4f53-96c8-b3da207eeeb9)
+
+![image](https://github.com/user-attachments/assets/62fec7ef-ddfc-411a-bc18-e826245ef211)
+
+![image](https://github.com/user-attachments/assets/a6680eac-d0ed-45fb-ac57-a27162ff2c4b)
