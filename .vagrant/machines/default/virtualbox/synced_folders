@@ -1,1 +1,1 @@
-{"rsync":{"/srv/www":{"type":"rsync","rsync__exclude":[".git/",".vagrant/","node_modules/"],"guestpath":"/srv/www","hostpath":"C:/Users/Pc/Documents/project","disabled":false,"__vagrantfile":true,"exclude":[".git/",".vagrant/","node_modules/"],"owner":"vagrant","group":"vagrant"}}}
+{"rsync":{"/srv/www":{"type":"rsync","rsync__exclude":[".git/",".vagrant/","node_modules/"],"guestpath":"/srv/www","hostpath":"C:/Users/Pc/Documents/projeto_final","disabled":false,"__vagrantfile":true,"exclude":[".git/",".vagrant/","node_modules/"],"owner":"vagrant","group":"vagrant"}}}
