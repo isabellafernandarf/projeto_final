@@ -1,0 +1,6 @@
+FROM httpd:latest
+
+COPY configs/httpd.conf /usr/local/apache2/conf/httpd.conf
+RUN sed -i 's/^#LoadModule mpm_prefork_module/LoadModule mpm_prefork_module/' /usr/local/apache2/conf/httpd.conf
+
+COPY ./website /usr/local/apache2/htdocs/

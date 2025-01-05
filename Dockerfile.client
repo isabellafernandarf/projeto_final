@@ -1,0 +1,13 @@
+FROM ubuntu:latest
+
+# Instalar nginx e remover pacotes desnecessários
+RUN apt-get update && apt-get install -y nginx && apt-get clean
+
+# Copiar o arquivo index.html para o diretório padrão do nginx
+COPY website/index.html /var/www/html/
+
+# Expor a porta 80 para acessar o servidor web
+EXPOSE 80
+
+# Iniciar o nginx em primeiro plano
+CMD ["nginx", "-g", "daemon off;"]

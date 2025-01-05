@@ -1,0 +1,40 @@
+version: "3.9"
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./configs/httpd.conf:/usr/local/apache2/conf/httpd.conf
+  dhcp:
+    build:
+      context: .
+      dockerfile: Dockerfile.dhcp
+    ports:
+      - "67:67/udp"
+    cap_add:
+      - NET_ADMIN  # Required for DHCP server
+  dns:
+    build:
+      context: .
+      dockerfile: Dockerfile.dns
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    depends_on:
+      - web
+      - dns
+      - dhcp
+    ports:
+      - "8081:80"  # Expose port 80 of the client container to port 8081 on the host
+networks:
+  default:
+    ipam:
+      config:
+        - subnet: 192.168.1.0/24

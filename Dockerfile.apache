@@ -1,0 +1,15 @@
+# Usar a imagem mais recente do Apache
+FROM httpd:latest
+
+# Copiar o arquivo de configuração do Apache
+COPY configs/httpd.conf /usr/local/apache2/conf/httpd.conf
+
+# Copiar arquivos do site para o diretório padrão do Apache
+COPY ./website /usr/local/apache2/htdocs/
+
+# Expor a porta padrão do Apache
+EXPOSE 80
+EXPOSE 443
+
+# Comando padrão para rodar o Apache
+CMD ["httpd-foreground"]

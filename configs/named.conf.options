@@ -1,0 +1,13 @@
+options {
+    directory "/var/cache/bind";
+
+    forwarders {
+        8.8.8.8;  # Google Public DNS
+        8.8.4.4;  # Google Public DNS
+    };
+
+    allow-query { any; };  # Allow queries from any client (for testing purposes - restrict in production)
+    recursion yes;        # Enable recursion
+
+    listen-on-v6 { none; }; # Disable IPv6 listening (optional)
+};

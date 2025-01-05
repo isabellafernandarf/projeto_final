@@ -1,0 +1,10 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y isc-dhcp-server net-tools
+RUN touch /var/lib/dhcp/dhcpd.leases
+
+COPY configs/dhcp.conf /etc/dhcp/dhcpd.conf
+
+EXPOSE 67/udp
+
+CMD ["dhcpd", "-f", "-d", "--no-pid"]
